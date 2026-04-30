@@ -128,6 +128,10 @@ struct ImportFromScreenshotSheet: View {
                                 posts: posts,
                                 engagement: engagement)
         modelContext.insert(snap)
+        try? modelContext.save()
+        if let all = try? modelContext.fetch(FetchDescriptor<StatSnapshot>()) {
+            WidgetData.refresh(from: all)
+        }
         dismiss()
     }
 }

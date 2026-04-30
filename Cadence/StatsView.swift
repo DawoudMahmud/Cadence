@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import Charts
+import WidgetKit
 
 struct StatsView: View {
     @Environment(\.modelContext) private var modelContext
@@ -136,6 +137,8 @@ struct StatsView: View {
                         Spacer()
                         Button(role: .destructive) {
                             modelContext.delete(snap)
+                            try? modelContext.save()
+                            WidgetData.refresh(from: snapshots.filter { $0 != snap })
                         } label: {
                             Image(systemName: "trash")
                         }
@@ -207,6 +210,10 @@ struct LogStatsSheet: View {
                                 posts: posts,
                                 engagement: engagement)
         modelContext.insert(snap)
+        try? modelContext.save()
+        if let all = try? modelContext.fetch(FetchDescriptor<StatSnapshot>()) {
+            WidgetData.refresh(from: all)
+        }
         dismiss()
     }
 }

@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4F3F08BF2FA31F680055610E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3F08BE2FA31F680055610E /* WidgetKit.framework */; };
+		4F3F08C12FA31F680055610E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3F08C02FA31F680055610E /* SwiftUI.framework */; };
+		4F3F08D02FA31F690055610E /* CadenceWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4F3F08BC2FA31F680055610E /* CadenceWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4F3F08922FA05E450055610E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,48 @@
 			remoteGlobalIDString = 4F3F08812FA05E440055610E;
 			remoteInfo = Cadence;
 		};
+		4F3F08CE2FA31F690055610E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F3F087A2FA05E440055610E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F3F08BB2FA31F680055610E;
+			remoteInfo = CadenceWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F3F08D52FA31F690055610E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4F3F08D02FA31F690055610E /* CadenceWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F3F08822FA05E440055610E /* Cadence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cadence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3F08912FA05E450055610E /* CadenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CadenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3F089B2FA05E450055610E /* CadenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CadenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3F08BC2FA31F680055610E /* CadenceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CadenceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3F08BE2FA31F680055610E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4F3F08C02FA31F680055610E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4F3F08D92FA3212F0055610E /* CadenceWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CadenceWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4F3F08D12FA31F690055610E /* Exceptions for "CadenceWidget" folder in "CadenceWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4F3F08BB2FA31F680055610E /* CadenceWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4F3F08842FA05E440055610E /* Cadence */ = {
@@ -43,6 +84,14 @@
 		4F3F089E2FA05E450055610E /* CadenceUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CadenceUITests;
+			sourceTree = "<group>";
+		};
+		4F3F08C22FA31F680055610E /* CadenceWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4F3F08D12FA31F690055610E /* Exceptions for "CadenceWidget" folder in "CadenceWidgetExtension" target */,
+			);
+			path = CadenceWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +118,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F3F08B92FA31F680055610E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3F08C12FA31F680055610E /* SwiftUI.framework in Frameworks */,
+				4F3F08BF2FA31F680055610E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		4F3F08792FA05E440055610E = {
 			isa = PBXGroup;
 			children = (
+				4F3F08D92FA3212F0055610E /* CadenceWidgetExtension.entitlements */,
 				4F3F08842FA05E440055610E /* Cadence */,
 				4F3F08942FA05E450055610E /* CadenceTests */,
 				4F3F089E2FA05E450055610E /* CadenceUITests */,
+				4F3F08C22FA31F680055610E /* CadenceWidget */,
+				4F3F08BD2FA31F680055610E /* Frameworks */,
 				4F3F08832FA05E440055610E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +149,18 @@
 				4F3F08822FA05E440055610E /* Cadence.app */,
 				4F3F08912FA05E450055610E /* CadenceTests.xctest */,
 				4F3F089B2FA05E450055610E /* CadenceUITests.xctest */,
+				4F3F08BC2FA31F680055610E /* CadenceWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4F3F08BD2FA31F680055610E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F3F08BE2FA31F680055610E /* WidgetKit.framework */,
+				4F3F08C02FA31F680055610E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +173,12 @@
 				4F3F087E2FA05E440055610E /* Sources */,
 				4F3F087F2FA05E440055610E /* Frameworks */,
 				4F3F08802FA05E440055610E /* Resources */,
+				4F3F08D52FA31F690055610E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4F3F08CF2FA31F690055610E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4F3F08842FA05E440055610E /* Cadence */,
@@ -163,6 +236,28 @@
 			productReference = 4F3F089B2FA05E450055610E /* CadenceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4F3F08BB2FA31F680055610E /* CadenceWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F3F08D22FA31F690055610E /* Build configuration list for PBXNativeTarget "CadenceWidgetExtension" */;
+			buildPhases = (
+				4F3F08B82FA31F680055610E /* Sources */,
+				4F3F08B92FA31F680055610E /* Frameworks */,
+				4F3F08BA2FA31F680055610E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4F3F08C22FA31F680055610E /* CadenceWidget */,
+			);
+			name = CadenceWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = CadenceWidgetExtension;
+			productReference = 4F3F08BC2FA31F680055610E /* CadenceWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +279,9 @@
 						CreatedOnToolsVersion = 26.3;
 						TestTargetID = 4F3F08812FA05E440055610E;
 					};
+					4F3F08BB2FA31F680055610E = {
+						CreatedOnToolsVersion = 26.3;
+					};
 				};
 			};
 			buildConfigurationList = 4F3F087D2FA05E440055610E /* Build configuration list for PBXProject "Cadence" */;
@@ -203,6 +301,7 @@
 				4F3F08812FA05E440055610E /* Cadence */,
 				4F3F08902FA05E450055610E /* CadenceTests */,
 				4F3F089A2FA05E450055610E /* CadenceUITests */,
+				4F3F08BB2FA31F680055610E /* CadenceWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +322,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4F3F08992FA05E450055610E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F3F08BA2FA31F680055610E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +359,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F3F08B82FA31F680055610E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +378,11 @@
 			isa = PBXTargetDependency;
 			target = 4F3F08812FA05E440055610E /* Cadence */;
 			targetProxy = 4F3F089C2FA05E450055610E /* PBXContainerItemProxy */;
+		};
+		4F3F08CF2FA31F690055610E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F3F08BB2FA31F680055610E /* CadenceWidgetExtension */;
+			targetProxy = 4F3F08CE2FA31F690055610E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,8 +511,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cadence/Cadence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN456NX26R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -424,8 +544,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cadence/Cadence.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN456NX26R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -530,6 +652,68 @@
 			};
 			name = Release;
 		};
+		4F3F08D32FA31F690055610E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CadenceWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN456NX26R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CadenceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CadenceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Cadence.CadenceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F3F08D42FA31F690055610E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CadenceWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN456NX26R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CadenceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CadenceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Cadence.CadenceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +749,15 @@
 			buildConfigurations = (
 				4F3F08AC2FA05E450055610E /* Debug */,
 				4F3F08AD2FA05E450055610E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F3F08D22FA31F690055610E /* Build configuration list for PBXNativeTarget "CadenceWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F3F08D32FA31F690055610E /* Debug */,
+				4F3F08D42FA31F690055610E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
