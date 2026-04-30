@@ -7,8 +7,14 @@ struct RootView: View {
             StatsView()
                 .tabItem { Label("Stats", systemImage: "chart.line.uptrend.xyaxis") }
 
+            InsightsView()
+                .tabItem { Label("Insights", systemImage: "sparkles") }
+
             IdeasView()
                 .tabItem { Label("Ideas", systemImage: "lightbulb") }
+
+            SettingsView()
+                .tabItem { Label("Settings", systemImage: "gearshape") }
         }
     }
 }
